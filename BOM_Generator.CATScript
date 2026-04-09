@@ -1,0 +1,24 @@
+Sub CATMain()
+
+Dim productDoc As ProductDocument
+Set productDoc = CATIA.ActiveDocument
+
+Dim rootProduct As Product
+Set rootProduct = productDoc.Product
+
+Dim i As Integer
+Dim child As Product
+
+Dim output As String
+output = "BOM List:" & vbCrLf
+
+For i = 1 To rootProduct.Products.Count
+    Set child = rootProduct.Products.Item(i)
+    
+    output = output & i & ". " & child.PartNumber & vbCrLf
+    
+Next
+
+MsgBox output
+
+End Sub
