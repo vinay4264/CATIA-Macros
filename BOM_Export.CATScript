@@ -1,0 +1,34 @@
+Sub CATMain()
+
+Dim productDoc As ProductDocument
+Set productDoc = CATIA.ActiveDocument
+
+Dim rootProduct As Product
+Set rootProduct = productDoc.Product
+
+Dim i As Integer
+Dim child As Product
+
+Dim filePath As String
+filePath = "C:\Temp\BOM_Output.csv"
+
+Dim fileNum As Integer
+fileNum = FreeFile
+
+Open filePath For Output As #fileNum
+
+' Write header
+Print #fileNum, "PartNumber"
+
+For i = 1 To rootProduct.Products.Count
+    Set child = rootProduct.Products.Item(i)
+    
+    Print #fileNum, child.PartNumber
+    
+Next
+
+Close #fileNum
+
+MsgBox "BOM exported to: " & filePath
+
+End Sub
