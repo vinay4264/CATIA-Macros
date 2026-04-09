@@ -1,61 +1,60 @@
-# CATIA Macros – Automation Toolkit
+# CATIA Macros
 
-## 📌 Project Overview
-This repository contains CATIA V5 automation macros developed using VBScript to improve design productivity and reduce manual effort.
+This repository contains some simple CATIA V5 macros that I created to automate small repetitive tasks during design work.
 
 ---
 
-## 🔧 Macro 1: Part Auto Renamer
+## Macro 1: Part Auto Renamer
 
-### 📄 Description
-Automates the renaming of all components in a CATIA assembly using a structured naming convention.
+### Description
+This macro renames all parts in an assembly in a simple sequence format.
 
-### ⚙️ Features
-- Sequential renaming of parts
-- Improves assembly organization
-- Reduces manual effort
+### What it does
+- Renames components like VINAY_001, VINAY_002, etc.
+- Helps keep assembly names organized
+- Saves manual effort
 
-### 📊 Example Output
+### Example
 Part1 → VINAY_001  
 Part2 → VINAY_002  
 
 ---
 
-## 🔧 Macro 2: BOM Generator
+## Macro 2: BOM Generator
 
-### 📄 Description
-Extracts and displays a Bill of Materials (BOM) from a CATIA assembly.
+### Description
+This macro reads all components in an assembly and shows a basic BOM list.
 
-### ⚙️ Features
-- Reads all components in assembly
-- Generates structured BOM list
-- Displays part names sequentially
+### What it does
+- Extracts part names from assembly
+- Displays them in order
+- Gives a quick view of components
 
-### 📊 Example Output
+### Example
 1. Part_A  
 2. Bolt_M8  
 3. Plate_01  
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools Used
 - CATIA V5  
 - VBScript  
 
 ---
 
-## ▶️ How to Use
-1. Open CATIA Assembly (.CATProduct)  
+## How to use
+1. Open CATIA assembly (.CATProduct)  
 2. Go to Tools → Macro → Run  
-3. Select required macro file  
-4. Execute  
+3. Select the macro file  
+4. Run  
 
 ---
 
-## ⚠️ Note
-These macros are designed based on CATIA V5 scripting structure and intended to run within CATIA environment.
+## Note
+These macros are created based on CATIA scripting structure. They are simple implementations meant for learning and basic automation.
 
 ---
 
-## 👨‍💻 Author
+## Author
 Vinay Raghavendra Gangumalla
