@@ -1,0 +1,21 @@
+Sub CATMain()
+
+Dim productDoc As ProductDocument
+Set productDoc = CATIA.ActiveDocument
+
+Dim rootProduct As Product
+Set rootProduct = productDoc.Product
+
+Dim i As Integer
+Dim child As Product
+
+For i = 1 To rootProduct.Products.Count
+    Set child = rootProduct.Products.Item(i)
+    
+    child.PartNumber = "VINAY_" & i
+    
+Next
+
+MsgBox "Renaming Completed!"
+
+End Sub
