@@ -56,5 +56,21 @@ These macros are created based on CATIA scripting structure. They are simple imp
 
 ---
 
+## Macro 3: BOM Export (CSV)
+
+### Description
+This macro extracts part names from a CATIA assembly and exports them to a CSV file.
+
+### What it does
+- Reads all components in assembly
+- Creates a BOM list
+- Saves output as CSV (can be opened in Excel)
+
+### Output
+File: BOM_Output.csv
+
+### Note
+File path can be modified inside the script based on user system.
+
 ## Author
 Vinay Raghavendra Gangumalla
