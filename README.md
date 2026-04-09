@@ -21,8 +21,8 @@ This macro automatically renames all components in a CATIA assembly using a stru
 4. Execute
 
 ## 🚀 Example Output
-Part1 → VINAY_1  
-Part2 → VINAY_2  
+Part1 → VINAY_001  
+Part2 → VINAY_002  
 
 ## ⚠️ Note
 This macro is intended to run inside CATIA V5 environment.
