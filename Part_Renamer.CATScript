@@ -9,7 +9,7 @@ Set rootProduct = productDoc.Product
 Dim i As Integer
 Dim child As Product
 
-For i = 1 To rootProduct.Products.Count
+For i = 001 To rootProduct.Products.Count
     Set child = rootProduct.Products.Item(i)
     
     child.PartNumber = "VINAY_" & i
