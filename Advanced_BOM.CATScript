@@ -1,0 +1,52 @@
+Sub CATMain()
+
+Dim productDoc As ProductDocument
+Set productDoc = CATIA.ActiveDocument
+
+Dim rootProduct As Product
+Set rootProduct = productDoc.Product
+
+Dim dict
+Set dict = CreateObject("Scripting.Dictionary")
+
+Dim i As Integer
+Dim child As Product
+Dim partName As String
+
+' Loop through all components
+For i = 1 To rootProduct.Products.Count
+    Set child = rootProduct.Products.Item(i)
+    
+    partName = child.PartNumber
+    
+    If dict.Exists(partName) Then
+        dict(partName) = dict(partName) + 1
+    Else
+        dict.Add partName, 1
+    End If
+    
+Next
+
+' File path
+Dim filePath As String
+filePath = "C:\Temp\Advanced_BOM.csv"
+
+Dim fileNum As Integer
+fileNum = FreeFile
+
+Open filePath For Output As #fileNum
+
+' Header
+Print #fileNum, "PartNumber,Quantity"
+
+' Write data
+Dim key
+For Each key In dict.Keys
+    Print #fileNum, key & "," & dict(key)
+Next
+
+Close #fileNum
+
+MsgBox "Advanced BOM exported successfully!"
+
+End Sub
