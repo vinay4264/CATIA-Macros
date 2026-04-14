@@ -72,5 +72,26 @@ File: BOM_Output.csv
 ### Note
 File path can be modified inside the script based on user system.
 
+---
+
+## Macro 4: Advanced BOM Generator
+
+### Description
+This macro generates a structured BOM with quantity count from a CATIA assembly.
+
+### What it does
+- Reads all components in assembly
+- Identifies duplicate parts
+- Counts quantity automatically
+- Exports clean BOM to CSV
+
+### Output Example
+PartNumber, Quantity  
+Bolt_M8, 12  
+Plate_01, 2  
+
+### Benefit
+Provides a more practical and industry-relevant BOM compared to basic extraction.
+
 ## Author
 Vinay Raghavendra Gangumalla
